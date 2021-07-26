@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
+import {IUserModel} from "../models/UserModel";
 
 @Component({
   selector: 'app-users',
@@ -6,11 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./users.component.scss']
 })
 export class UsersComponent {
-  users = [
+
+  users: IUserModel[] = [
     {name: 'ivan', age: 25, status: true},
-    {name: 'ihor', age: 23, status: false}
+    {name: 'ihor', age: 23, status: false},
+    {name: 'stepan', age: 28, status: true}
   ]
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
