@@ -4,23 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import {RouterModule} from "@angular/router";
 import { UsersComponent } from './users/users.component';
-import { PostsComponent } from './posts/posts.component';
 import {HttpClientModule} from "@angular/common/http";
 import {routes} from "./routes/basic.routes";
-import { UserComponent } from './user/user.component';
-import { PostComponent } from './post/post.component';
-import { UserDetailsComponent } from './user-details/user-details.component';
-import { PostDetailsComponent } from './post-details/post-details.component';
-
+import { UserWithPostsComponent } from './user-with-posts/userWithPosts.component';
+import {PostComponent} from "./post/post.component";
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    PostsComponent,
-    UserComponent,
+    UserWithPostsComponent,
     PostComponent,
-    UserDetailsComponent,
-    PostDetailsComponent
   ],
   imports: [
     BrowserModule,
