@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {Router} from "@angular/router";
+import {IUser} from "./models/IUser";
+import {IPost} from "./models/IPost";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Hello Angular!';
+
+  @Input()
+  users: IUser;
+  posts: IPost;
+
+  constructor(private router: Router) {
+  }
+
+  goToUsers() {
+    this.router.navigate(['users'], {state: this.users})
+  }
+
+  goToPosts() {
+    this.router.navigate(['posts'], {state: this.posts})
+  }
 }
