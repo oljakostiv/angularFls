@@ -1,0 +1,11 @@
+$background-color: #82EAFF;
+$color: #8B3500;
+
+.app {
+  height: 50px;
+  background-color: $background-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly
+}
+
