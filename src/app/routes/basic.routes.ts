@@ -1,7 +1,7 @@
 import {Routes} from "@angular/router";
 import {PostsComponent} from "../components/posts/posts.component";
 import {PostDetailsComponent} from "../components/post-details/post-details.component";
-import {PostGuardsService} from "../servises/post-guards.service";
+import {PostGuardsService} from "../services/post-guards.service";
 
 export let routes: Routes = [
   {
