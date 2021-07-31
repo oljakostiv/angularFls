@@ -1,11 +1,27 @@
 $background-color: #82EAFF;
+$background-color-btn: #FFF3D0;
 $color: #8B3500;
+
+.wrap {
+  width: 100%;
+}
 
 .app {
   height: 50px;
   background-color: $background-color;
   display: flex;
   align-items: center;
-  justify-content: space-evenly
+  justify-content: space-evenly;
+}
+
+button {
+  background-color: $background-color-btn;
+  font-style: italic;
+  font-size: 13px;
+  border-radius: 20%;
+
+  &:hover {
+    background-color: #D5DFFF;
+  }
 }
 

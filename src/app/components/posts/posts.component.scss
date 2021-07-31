@@ -1,5 +1,6 @@
+@import "src/app/components/users/users.component";
+
 .posts {
-  display: flex;
-  justify-content: space-around;
+  @extend %tml;
   background-color: #FFF3D0;
 }

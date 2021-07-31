@@ -1,7 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {Router} from "@angular/router";
-import {IUser} from "./models/IUser";
-import {IPost} from "./models/IPost";
+import {IUser} from "./models/i-user";
+import {IPost} from "./models/i-post";
 
 @Component({
   selector: 'app-root',

@@ -1,5 +1,9 @@
-.users {
+%tml {
   display: flex;
   justify-content: space-around;
+}
+
+.users {
+  @extend %tml;
   background-color: #C1CAE7;
 }
