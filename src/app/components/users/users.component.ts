@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {IUser} from "../../models/i-user";
 import {UserService} from "../../services/user.service";
 import {ActivatedRoute, Router} from "@angular/router";
@@ -14,8 +14,6 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 export class UsersComponent implements OnInit {
 
  users: IUser[];
- @Input()
- user: IUser;
 
   myFormUsers: FormGroup = new FormGroup({user: new FormControl('', Validators.required)});
 
@@ -26,6 +24,7 @@ export class UsersComponent implements OnInit {
   }
 
   details() {
-    this.router.navigate([this.user.id], {relativeTo:this.activatedRoute, state: this.user})
+    const userId = this.myFormUsers.controls.user.value;
+    this.router.navigate([userId], {relativeTo:this.activatedRoute})
   }
 }

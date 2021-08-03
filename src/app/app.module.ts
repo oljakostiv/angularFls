@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './components/app.component';
 import { UsersComponent } from './components/users/users.component';
 import {HttpClientModule} from "@angular/common/http";
-import { UserComponent } from './components/user/user.component';
 import {RouterModule} from "@angular/router";
 import {routes} from "./routes/basic.routes";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
@@ -15,7 +14,6 @@ import { ReactiveComponent } from './components/reactive/reactive.component';
   declarations: [
     AppComponent,
     UsersComponent,
-    UserComponent,
     UserDetailsComponent,
     ReactiveComponent
   ],
