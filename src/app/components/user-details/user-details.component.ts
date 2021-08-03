@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {IUser} from "../../models/i-user";
+import {UserModels} from "../../models/user.models";
 import {ActivatedRoute} from "@angular/router";
 import {UserService} from "../../services/user.service";
 
@@ -10,7 +10,7 @@ import {UserService} from "../../services/user.service";
 })
 export class UserDetailsComponent implements OnInit {
 
-  userDtl: IUser;
+  userDtl: UserModels;
 
   constructor(private activatedRoute: ActivatedRoute, private userService: UserService) {
     this.activatedRoute.params.subscribe(({id}) => {
@@ -20,5 +20,4 @@ export class UserDetailsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

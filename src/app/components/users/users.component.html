@@ -6,6 +6,7 @@
           <option *ngFor="let user of users" [value]="user.id">{{user.id}} - {{user.name}}</option>
         </select>
   </div>
+  <br>
   <button [disabled]="myFormUsers.invalid">details</button>
 </form>
 

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {IUser} from "../../models/i-user";
+import {UserModels} from "../../models/user.models";
 import {UserService} from "../../services/user.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
@@ -10,10 +10,9 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
   styleUrls: ['./users.component.scss']
 })
 
-
 export class UsersComponent implements OnInit {
 
- users: IUser[];
+ users: UserModels[];
 
   myFormUsers: FormGroup = new FormGroup({user: new FormControl('', Validators.required)});
 
