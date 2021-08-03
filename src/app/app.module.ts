@@ -8,7 +8,6 @@ import { UserComponent } from './components/user/user.component';
 import {RouterModule} from "@angular/router";
 import {routes} from "./routes/basic.routes";
 import {FormsModule} from "@angular/forms";
-import { TdFormComponent } from './components/td-form/td-form.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 
 @NgModule({
@@ -16,7 +15,6 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
     AppComponent,
     UsersComponent,
     UserComponent,
-    TdFormComponent,
     UserDetailsComponent
   ],
   imports: [

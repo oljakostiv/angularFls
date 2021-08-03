@@ -3,7 +3,7 @@
 <form #tref (ngSubmit)="goToDetails(tref)">
   <div>
     <select name="users" [(ngModel)]="users">
-      <option [value]="users"><app-user *ngFor="let user of users" [user]="user"></app-user></option>
+      <option *ngFor="let user of users" [value]="users"><app-user [user]="user"></app-user></option>
     </select>
   </div>
   <button>Details</button>
