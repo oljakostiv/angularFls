@@ -20,7 +20,6 @@ export class CarsComponent implements OnInit {
       model: new FormControl('', Validators.maxLength(20)),
       price: new FormControl('', Validators.minLength(0)),
       year: new FormControl('', [Validators.min(1990), Validators.max(2021)])
-
     })
     this.carService.getCars().subscribe(value => this.cars = value)
   }

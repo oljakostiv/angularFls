@@ -13,7 +13,6 @@ export class CarService {
   url = environment.url;
 
   constructor(private httpClient: HttpClient) {
-
   }
 
   getCars(): Observable<CarModels[]> {
