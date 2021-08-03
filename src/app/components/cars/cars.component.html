@@ -5,4 +5,4 @@
   <button (click)="save()">save</button>
 </form>
 
-<app-car></app-car>
+<app-car *ngFor="let car of cars" [car]="car"></app-car>

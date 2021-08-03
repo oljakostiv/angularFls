@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {CarModels} from "../../models/car.models";
 import {CarService} from "../../services/car.service";
 import {FormControl, FormGroup} from "@angular/forms";
@@ -12,7 +12,8 @@ export class CarsComponent implements OnInit {
   cars: CarModels[];
   form: FormGroup;
 
-  constructor(private carService: CarService) { }
+  constructor(private carService: CarService) {
+  }
 
   ngOnInit(): void {
     this.form = new FormGroup({
@@ -21,7 +22,7 @@ export class CarsComponent implements OnInit {
       year: new FormControl('')
 
     })
-this.carService.getCars().subscribe(value => this.cars = value)
+    this.carService.getCars().subscribe(value => this.cars = value)
   }
 
   save(): void {
