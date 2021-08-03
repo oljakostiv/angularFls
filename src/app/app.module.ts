@@ -7,7 +7,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { UserComponent } from './components/user/user.component';
 import {RouterModule} from "@angular/router";
 import {routes} from "./routes/basic.routes";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { ReactiveComponent } from './components/reactive/reactive.component';
 
@@ -24,6 +24,7 @@ import { ReactiveComponent } from './components/reactive/reactive.component';
     HttpClientModule,
     RouterModule.forRoot(routes),
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
