@@ -1,1 +1,9 @@
-<!--{{user?.id}} - {{user?.name}}-->
+<form #tref (ngSubmit)="goToDetails(tref)">
+  <div>
+    <select name="user" [(ngModel)]="user">
+      <option [value]="user">{{user?.id}} - {{user?.name}}</option>
+    </select>
+  </div>
+  <button>Details</button>
+</form>
+

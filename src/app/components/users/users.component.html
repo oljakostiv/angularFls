@@ -1,8 +1,3 @@
-<form #tref (ngSubmit)="goToDetails(tref)">
-  <div>
-    <select name="users" [(ngModel)]="users">
-        <option *ngFor="let user of users" [value]="user">{{user?.id}} - {{user?.name}}</option>
-    </select>
-  </div>
-  <button>Details</button>
-</form>
+<router-outlet></router-outlet>
+<app-user *ngFor="let user of users" [user] = 'user'></app-user>
+
