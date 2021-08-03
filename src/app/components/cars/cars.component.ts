@@ -27,5 +27,4 @@ export class CarsComponent implements OnInit {
   save(): void {
     this.carService.postCar(this.form.getRawValue()).subscribe(value => this.cars = [...this.cars, value])
   }
-
 }

@@ -22,5 +22,4 @@ export class CarService {
   postCar(car: CarModels): Observable<CarModels> {
     return this.httpClient.post<CarModels>(this.url, car)
   }
-
 }
