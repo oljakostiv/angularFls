@@ -10,6 +10,7 @@ import {routes} from "./routes/basic.routes";
 import {FormsModule} from "@angular/forms";
 import { TdFormComponent } from './components/td-form/td-form.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
+import { ReactiveComponent } from './components/reactive/reactive.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
     UsersComponent,
     UserComponent,
     TdFormComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    ReactiveComponent
   ],
   imports: [
     BrowserModule,
