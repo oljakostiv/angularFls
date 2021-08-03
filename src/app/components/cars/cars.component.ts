@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ICar} from "../../models/i-car";
+import {CarModels} from "../../models/car.models";
 import {CarService} from "../../services/car.service";
 import {FormControl, FormGroup} from "@angular/forms";
 
@@ -9,7 +9,7 @@ import {FormControl, FormGroup} from "@angular/forms";
   styleUrls: ['./cars.component.scss']
 })
 export class CarsComponent implements OnInit {
-  cars: ICar[];
+  cars: CarModels[];
   form: FormGroup;
 
   constructor(private carService: CarService) { }

@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {ICar} from "../../models/i-car";
+import {CarModels} from "../../models/car.models";
 
 @Component({
   selector: 'app-car',
@@ -9,7 +9,7 @@ import {ICar} from "../../models/i-car";
 export class CarComponent implements OnInit {
 
   @Input()
-  car: ICar;
+  car: CarModels;
 
   constructor() { }
 

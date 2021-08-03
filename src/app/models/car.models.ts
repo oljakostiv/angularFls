@@ -1,4 +1,4 @@
-export interface ICar {
+export interface CarModels {
   id: number,
   model: string,
   price: number,
