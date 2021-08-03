@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CarModels} from "../../models/car.models";
 import {CarService} from "../../services/car.service";
-import {FormControl, FormGroup} from "@angular/forms";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-cars',
@@ -17,9 +17,9 @@ export class CarsComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = new FormGroup({
-      model: new FormControl(''),
-      price: new FormControl(''),
-      year: new FormControl('')
+      model: new FormControl('', Validators.maxLength(20)),
+      price: new FormControl('', Validators.minLength(0)),
+      year: new FormControl('', [Validators.min(1990), Validators.max(2021)])
 
     })
     this.carService.getCars().subscribe(value => this.cars = value)
