@@ -1,10 +1,15 @@
-<!--<router-outlet></router-outlet>-->
+<router-outlet></router-outlet>
 
-<!--<form>-->
-<!--  <div>-->
-<!--    <select name="user" [(ngModel)]="users">-->
-<!--      <option [value]="users"><app-user *ngFor="let user of users" [user] = 'user'></app-user></option>-->
-<!--    </select>-->
-<!--  </div>-->
-<!--  <button>Details</button>-->
-<!--</form>-->
+
+
+<form [formGroup]="myFormUsers" (ngSubmit)="details()">
+  <div>
+        <select formControlName="user">
+          <option *ngFor="let user of users" [value]="users"><app-user [user] = 'user'></app-user></option>
+        </select>
+  </div>
+  <button [disabled]="myFormUsers.invalid">details</button>
+</form>
+
+
+

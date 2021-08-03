@@ -10,11 +10,11 @@ import {UserService} from "../../services/user.service";
 })
 export class UserDetailsComponent implements OnInit {
 
-  user: IUser;
+  userDtl: IUser;
 
   constructor(private activatedRoute: ActivatedRoute, private userService: UserService) {
     this.activatedRoute.params.subscribe(({id}) => {
-      this.userService.getUserById(id).subscribe(value => this.user = value)
+      this.userService.getUserById(id).subscribe(value => this.userDtl = value)
     })
   }
 

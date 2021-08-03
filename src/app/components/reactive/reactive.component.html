@@ -1,4 +1,4 @@
-<form [formGroup]="myForm">
+<form [formGroup]="myForm" (ngSubmit)="save()">
   <input type="text" formControlName="user">
-  <button>save</button>
+  <button [disabled]="myForm.invalid">save</button>
 </form>
