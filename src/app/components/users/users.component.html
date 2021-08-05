@@ -2,7 +2,7 @@
 
 <form #formdata = 'ngForm' (ngSubmit)="goToDetails(formdata)">
   <div>
-    <select name="users" [(ngModel)]="users">
+    <select name="users" [(ngModel)]="userId">
       <option *ngFor="let user of users" [value]="user.id">{{user.id}} - {{user.name}}</option>
     </select>
   </div>

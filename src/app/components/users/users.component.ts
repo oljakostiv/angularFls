@@ -11,10 +11,12 @@ import {NgForm} from "@angular/forms";
 })
 export class UsersComponent implements OnInit {
 
- users: UserModel[];
- @ViewChild('formdata') myForm: NgForm;
+  userId: number;
+  users: UserModel[];
+  @ViewChild('formdata') myForm: NgForm;
 
-  constructor(private userService: UserService, private router: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(private userService: UserService, private router: Router, private activatedRoute: ActivatedRoute) {
+  }
 
   ngOnInit(): void {
     this.userService.getUsers().subscribe(value => this.users = value)
@@ -22,8 +24,8 @@ export class UsersComponent implements OnInit {
 
   goToDetails(form: NgForm) {
     console.log(this.myForm);
-    // const userId = this.myForm.value.id
-    // this.router.navigate( [userId], {relativeTo: this.activatedRoute})
+    const userId = this.myForm.value
+    this.router.navigate([userId], {relativeTo: this.activatedRoute})
   }
 
 }
