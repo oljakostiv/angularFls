@@ -15,10 +15,6 @@ export class UserService {
   getUsers(): Observable<UserModel[]> {
     return this.httpClient.get<UserModel[]>(this.url)
   }
-
-  getUserDetails(id: number): Observable<UserModel> {
-    return this.httpClient.get<UserModel>(this.url + '/' + id)
-  }
 }
 
 

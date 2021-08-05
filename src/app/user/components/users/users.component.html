@@ -1,6 +1,4 @@
-<div *ngIf="user">
-  {{user.email}}
-</div>
+<app-user-details [userDtl]="user"></app-user-details>
 
 <ul>
   <li *ngFor="let user of users">

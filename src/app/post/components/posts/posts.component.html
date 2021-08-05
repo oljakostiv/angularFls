@@ -1,6 +1,5 @@
-<div *ngIf="post">
-  {{post.body}}
-</div>
+<app-post-details [postDtl]="post"></app-post-details>
+
 
 <ul>
   <li *ngFor="let post of posts">

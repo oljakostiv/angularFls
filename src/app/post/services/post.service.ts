@@ -15,8 +15,4 @@ export class PostService {
   getPosts(): Observable<PostModel[]> {
     return this.httpClient.get<PostModel[]>(this.url)
   }
-
-  getPostDetails(id: number): Observable<PostModel> {
-    return this.httpClient.get<PostModel>(this.url + '/' + id)
-  }
 }
