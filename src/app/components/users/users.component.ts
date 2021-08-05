@@ -23,7 +23,7 @@ export class UsersComponent implements OnInit {
   goToDetails(form: NgForm) {
     console.log(this.myForm);
     // const userId = this.myForm.value.id
-    // this.router.navigate( ['users', userId], {relativeTo: this.activatedRoute})
+    // this.router.navigate( [userId], {relativeTo: this.activatedRoute})
   }
 
 }
