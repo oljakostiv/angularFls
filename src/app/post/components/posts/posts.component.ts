@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {PostModel} from "../../../models/post.model";
 
 @Component({
   selector: 'app-posts',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./posts.component.scss']
 })
 export class PostsComponent implements OnInit {
+
+  posts: PostModel [];
 
   constructor() { }
 

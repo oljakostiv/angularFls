@@ -6,6 +6,7 @@ import { UsersComponent } from './components/users/users.component';
 import {PostService} from "../post/services/post.service";
 import { UserComponent } from './components/user/user.component';
 import {UserDetailsComponent} from './components/user.details/user.details.component';
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import {UserDetailsComponent} from './components/user.details/user.details.compo
   ],
   imports: [
     CommonModule,
-    UserRoutingModule
+    UserRoutingModule,
+    HttpClientModule,
   ],
   exports: [
     UsersComponent

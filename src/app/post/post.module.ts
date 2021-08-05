@@ -6,6 +6,7 @@ import { PostsComponent } from './components/posts/posts.component';
 import {PostService} from "./services/post.service";
 import { PostComponent } from './components/post/post.component';
 import {PostDetailsComponent} from './components/post.details/post.details.component';
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import {PostDetailsComponent} from './components/post.details/post.details.compo
   ],
   imports: [
     CommonModule,
-    PostRoutingModule
+    PostRoutingModule,
+    HttpClientModule
   ],
   exports: [
     PostsComponent
