@@ -8,9 +8,15 @@ import {HttpClient} from "@angular/common/http";
 })
 export class PostService {
 
+  private url = 'https://jsonplaceholder.typicode.com/posts'
+
   constructor(private httpClient: HttpClient) { }
 
   getPosts(): Observable<PostModel[]> {
-    return this.httpClient.get<PostModel[]('https://jsonplaceholder.typicode.com/posts')
+    return this.httpClient.get<PostModel[]>(this.url)
+  }
+
+  getPostDetails(id: number): Observable<PostModel> {
+    return this.httpClient.get<PostModel>(this.url + '/' + id)
   }
 }

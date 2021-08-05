@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {PostModel} from "../../../models/post.model";
+import {PostService} from "../../services/post.service";
 
 @Component({
   selector: 'app-posts',
@@ -9,10 +10,15 @@ import {PostModel} from "../../../models/post.model";
 export class PostsComponent implements OnInit {
 
   posts: PostModel [];
+  post: PostModel;
 
-  constructor() { }
+  constructor(private postService: PostService) { }
 
   ngOnInit(): void {
+    this.postService.getPosts().subscribe(value => this.posts = value)
   }
 
+  catchEE(obj: PostModel) {
+    this.post = obj
+  }
 }

@@ -10,10 +10,16 @@ import {UserService} from "../../services/user.service";
 export class UsersComponent implements OnInit {
 
   users: UserModel [];
+  user: UserModel;
 
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
+    this.userService.getUsers().subscribe(value => this.users = value)
+  }
+
+  catchEE(obj: UserModel) {
+    this.user = obj
   }
 
 }

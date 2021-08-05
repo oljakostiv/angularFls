@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { UserRoutingModule } from './user-routing.module';
 import { UsersComponent } from './components/users/users.component';
-import {PostService} from "../post/services/post.service";
 import { UserComponent } from './components/user/user.component';
 import {UserDetailsComponent} from './components/user.details/user.details.component';
-import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {HttpClientModule} from "@angular/common/http";
+import {UserService} from "./services/user.service";
 
 
 @NgModule({
@@ -21,10 +21,11 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     HttpClientModule,
   ],
   exports: [
-    UsersComponent
+    UsersComponent,
+    HttpClientModule,
   ],
   providers: [
-    PostService
+    UserService
   ]
 })
 export class UserModule { }

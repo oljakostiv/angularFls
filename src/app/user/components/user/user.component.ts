@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {UserModel} from "../../../models/user.model";
 
 @Component({
   selector: 'app-user',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
+  @Input()
+  user: UserModel;
+
+  @Output()
+  xxx: EventEmitter<UserModel> = new EventEmitter<UserModel>();
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  goToUserDetails() {
+    this.xxx.emit(this.user);
+  }
+
 
 }

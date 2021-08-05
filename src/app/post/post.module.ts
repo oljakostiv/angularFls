@@ -21,7 +21,8 @@ import {HttpClientModule} from "@angular/common/http";
     HttpClientModule
   ],
   exports: [
-    PostsComponent
+    PostsComponent,
+    HttpClientModule
   ],
   providers: [
     PostService
