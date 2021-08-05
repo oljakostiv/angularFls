@@ -1,8 +1,7 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {UserModel} from "../../models/user.model";
 import {UserService} from "../../services/user.service";
 import {ActivatedRoute, Router} from "@angular/router";
-import {NgForm} from "@angular/forms";
 
 @Component({
   selector: 'app-users',
@@ -13,7 +12,6 @@ export class UsersComponent implements OnInit {
 
   userId: number;
   users: UserModel[];
-  @ViewChild('formdata') myForm: NgForm;
 
   constructor(private userService: UserService, private router: Router, private activatedRoute: ActivatedRoute) {
   }
@@ -22,9 +20,8 @@ export class UsersComponent implements OnInit {
     this.userService.getUsers().subscribe(value => this.users = value)
   }
 
-  goToDetails(form: NgForm) {
-    console.log(this.myForm);
-    const userId = this.myForm.value
+  goToDetails(tref: HTMLFormElement) {
+    const userId = this.userId
     this.router.navigate([userId], {relativeTo: this.activatedRoute})
   }
 
