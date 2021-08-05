@@ -1,2 +1,2 @@
 {{post?.id}} - {{post?.title}}
-<button (click)="goToPostDetails()">Details</button>
+<button (click)="goToPostDetails()" [class.hidden]="post.id === check">Details</button>
