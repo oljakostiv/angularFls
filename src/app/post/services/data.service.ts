@@ -11,11 +11,12 @@ export class DataService {
   constructor() {
   }
 
+  getActivate(): Observable<number> {
+    return this.activeBtn
+  }
+
   setActivate(id: number): void {
     this.activeBtn.next(id)
   }
 
-  getBActivate(): Observable<number> {
-    return this.activeBtn
-  }
 }

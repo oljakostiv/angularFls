@@ -21,7 +21,7 @@ export class PostComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.dataService.getBActivate().subscribe(value => this.check = value)
+    this.dataService.getActivate().subscribe(value => this.check = value)
   }
 
   goToPostDetails() {
