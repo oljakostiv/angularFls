@@ -1,10 +1,10 @@
 <router-outlet></router-outlet>
 
-<form #myForm = 'ngForm' (ngSubmit)="goToDetails(myForm.value)">
+<form #formdata = 'ngForm' (ngSubmit)="goToDetails(formdata)">
   <div>
     <select name="users" [(ngModel)]="users">
       <option *ngFor="let user of users" [value]="user.id">{{user.id}} - {{user.name}}</option>
     </select>
   </div>
-  <button type="submit" [disabled]="!myForm.valid">Details</button>
+  <button type="submit" [disabled]="!formdata.valid">Details</button>
 </form>
