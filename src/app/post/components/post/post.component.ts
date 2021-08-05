@@ -1,8 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {PostModel} from "../../../models/post.model";
 import {DataService} from "../../services/data.service";
-import {Router} from "@angular/router";
-
 
 
 @Component({
