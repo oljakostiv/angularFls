@@ -21,6 +21,7 @@ export class UsersComponent implements OnInit {
   }
 
   goToDetails(tref: HTMLFormElement) {
+    console.log(tref);
     const userId = this.userId
     this.router.navigate([userId], {relativeTo: this.activatedRoute})
   }
