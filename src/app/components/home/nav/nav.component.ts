@@ -22,10 +22,13 @@ export class NavComponent implements OnInit {
     this.carService.getAll(this.links.next).subscribe(value => {
       this.links = value.links
       this.dataTransferService.setData(value.data)
-    })
+    });
   }
 
   prev() {
-
-  }
-}
+    // history.back()
+    this.carService.getAll(this.links.prev).subscribe(value => {
+      this.links = value.links
+      this.dataTransferService.setData(value.data)
+    }); -1
+}}
